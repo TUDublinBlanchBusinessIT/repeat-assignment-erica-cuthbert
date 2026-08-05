@@ -29,7 +29,10 @@ $result = $conn->query($sql);
 
      <h3><?php echo $row["location"]; ?></h3>
 
-    <?php
+
+    <?php 
+    
+    }
 
 include 'db.php';
 
