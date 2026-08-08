@@ -4,22 +4,27 @@ include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-	$user_name=$_POST['name'];
-	$user_email=$_POST['email'];
-	$user_password=$_POST['password'];
+	$name=$_POST['name'];
+	$email=$_POST['email'];
+	$password=$_POST['password'];
     $role=$_POST['role'];
-
 
 	$stmt = $conn->prepare(
         	"INSERT INTO users (name, email, password, role)
         	 VALUES (?, ?, ?, ?)"
     	);
 
+	if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
+
     	$stmt->bind_param("ssss", $name, $email, $password, $role);
 
-    	$stmt->execute();
-
-    	echo "Event added successfully!";
+    	if ($stmt->execute()) {
+    		echo "User added successfully!";
+	} else {
+    	echo "Error adding user: " . $stmt->error;
+	}
 }
 
 ?>

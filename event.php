@@ -26,8 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <HTML>
-	<BODY>
-		<FORM method="POST" action="event.php">
+	<HEAD>
+    	<TITLE> New Event </TITLE>
+	</HEAD>
+		<BODY>
+			<FORM method="POST" action="event.php">
 
 			<label>Event Name:</label> 
 			<input type="text" name="event_name"><br>
