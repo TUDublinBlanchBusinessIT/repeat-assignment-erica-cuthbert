@@ -18,7 +18,7 @@ if ($_SESSION["role"] != "admin") {
 <html>
 
 <head>
-    <title>Admin</title>
+    <title>Admins Page</title>
 </head>
 
 <body>

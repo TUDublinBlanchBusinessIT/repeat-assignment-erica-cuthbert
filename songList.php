@@ -36,7 +36,7 @@ $result = $conn->query("SELECT * FROM songs");
 
 <br><br>
 
-<a href="logout.php">Logout</a>
+<a href="member.php">Back to Homepage</a>
 
 </body>
 </html>

@@ -41,6 +41,9 @@ $sql = "SELECT * FROM events";
 $result = $conn->query($sql);
 
 ?>
+
+<a href="member.php">Back to Homepage</a>
+
 </body>
 
 </html>

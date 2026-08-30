@@ -22,23 +22,26 @@ if ($_SESSION["role"] != "member") {
 
 <head>
     <title>Member</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <h1>Member</h1>
+    <h1>Members Page</h1>
 
     <p> Welcome <?php echo $_SESSION["name"]; ?> </p>
 
-    <a href="songList.php">View Songs</a>
+    <a href="songList.php" class="btn btn-primary">View Songs</a>
 
     <br><br>
 
-    <a href="index.php">View Events</a>
+    <a href="index.php" class="btn btn-primary">View Events</a>
 
     <br><br>
 
-    <a href="logout.php">Logout</a>
+    <a href="logout.php" class="btn btn-primary">Logout</a>
 
 
 </body>
