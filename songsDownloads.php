@@ -11,7 +11,7 @@ if (!isset($_SESSION["user_id"])) {
 $id = $_GET["id"];
 
 $stmt = $conn->prepare(
-    "SELECT * FROM song WHERE song_id = ?"
+    "SELECT * FROM songs WHERE song_id = ?"
 );
 
 $stmt->bind_param("i", $id);
@@ -41,19 +41,11 @@ $song = $result->fetch_assoc();
 
 <h3>Alto</h3>
 
-<audio controls> 
-    <source src="<?php echo $song["alto_file"]; ?>">
-</audio>
-
 <a href="<?php echo $song["alto_file"]; ?>" download>
     Download Alto
 </a>
 
 <h3>Bass</h3>
-
-<audio controls>
-    <source src="<?php echo $song["bass_file"]; ?>">
-</audio>
 
 <a href="<?php echo $song["bass_file"]; ?>" download>
     Download Bass
@@ -61,19 +53,11 @@ $song = $result->fetch_assoc();
 
 <h3>Soprano</h3>
 
-<audio controls>
-    <source src="<?php echo $song["soprano_file"]; ?>">
-</audio>
-
 <a href="<?php echo $song["soprano_file"]; ?>" download>
     Download Soprano
 </a>
 
 <h3>Tenor</h3>
-
-<audio controls>
-    <source src="<?php echo $song["tenor_file"]; ?>">
-</audio>
 
 <a href="<?php echo $song["tenor_file"]; ?>" download>
     Download Tenor
@@ -81,7 +65,7 @@ $song = $result->fetch_assoc();
 
 <br><br>
 
-<a href="song.php">Back to Songs</a>
+<a href="songList.php">Back to Songs</a>
 
 </body>
 </html>

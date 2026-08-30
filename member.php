@@ -7,6 +7,12 @@ if (!isset($_SESSION["user_id"])) {
     header("Location: login.php");
     exit;
 
+if ($_SESSION["role"] != "member") {
+    header("Location: admin.php");
+    exit;
+}
+
+
 }
 
 ?>
@@ -15,18 +21,20 @@ if (!isset($_SESSION["user_id"])) {
 <html>
 
 <head>
-    <title>Choir Login</title>
+    <title>Member</title>
 </head>
 
 <body>
 
-    <h1>Choir Login</h1>
+    <h1>Member</h1>
 
     <p> Welcome <?php echo $_SESSION["name"]; ?> </p>
 
-    <p> Role: <?php echo $_SESSION["role"]; ?> </p>
+    <a href="songList.php">View Songs</a>
 
-    <a href="songs.php">View Songs</a>
+    <br><br>
+
+    <a href="index.php">View Events</a>
 
     <br><br>
 
@@ -36,3 +44,4 @@ if (!isset($_SESSION["user_id"])) {
 </body>
 
 </html>
+

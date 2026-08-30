@@ -28,6 +28,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_id"] = $user["user_id"];
         $_SESSION["name"] = $user["name"];
         $_SESSION["role"] = $user["role"];
+        $_SESSION["user_id"] = $user["user_id"];
+
+
+    if ($user["role"] == "admin") {
+        header("Location: admin.php");
+    } else {
+        header("Location: member.php");
+    }
+
+    exit;
 
         header("Location: member.php");
         exit;

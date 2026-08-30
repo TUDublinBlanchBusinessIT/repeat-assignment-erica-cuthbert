@@ -27,8 +27,10 @@ $result = $conn->query("SELECT * FROM songs");
 
     <h3><?php echo $row["song_name"]; ?></h3>
 
-    <p href="songsDownload.php?id=<?php echo $row["song_id"]; ?>">
-        View Song </p>
+    <a href="songsDownloads.php?id=<?php echo $row["song_id"]; ?>">
+        View Song </a>
+
+</a>
 
 <?php } ?>
 
