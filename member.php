@@ -27,11 +27,17 @@ if ($_SESSION["role"] != "member") {
 
 </head>
 
-<body>
+<body class="bg-light">
 
-    <h1>Members Page</h1>
+<div class="container mt-5">
 
-    <p> Welcome <?php echo $_SESSION["name"]; ?> </p>
+<div class="card shadow p-4 mx-auto" style="max-width: 500px;">
+
+    <h1 class="text-center mb-3">Members Page</h1>
+
+     <p class="text-center"> Welcome <?php echo $_SESSION["name"]; ?></p>
+
+    <div class="d-grid gap-3">
 
     <a href="songList.php" class="btn btn-primary">View Songs</a>
 
@@ -41,7 +47,13 @@ if ($_SESSION["role"] != "member") {
 
     <br><br>
 
-    <a href="logout.php" class="btn btn-primary">Logout</a>
+    <a href="logout.php" class="btn btn-secondary">Logout</a>
+
+      </div>
+
+    </div>
+
+</div>
 
 
 </body>

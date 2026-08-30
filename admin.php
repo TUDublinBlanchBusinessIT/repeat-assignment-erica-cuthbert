@@ -19,27 +19,43 @@ if ($_SESSION["role"] != "admin") {
 
 <head>
     <title>Admins Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-<h1>Admin Page</h1>
+<div class="container mt-5">
 
-<p>Welcome <?php echo $_SESSION["name"]; ?></p>
+    <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
 
-<a href="songs.php">Add Songs</a>
+<h1 class="text-center mb-3">Admin Page</h1>
+
+<p class="text-center">Welcome <?php echo $_SESSION["name"]; ?></p>
+
+
+<div class="d-grid gap-3">
+
+<a href="songs.php" class="btn btn-primary">Add Songs</a>
 
 <br><br>
 
-<a href="user.php">Add Users</a>
+<a href="user.php" class="btn btn-primary">Add Users</a>
 
 <br><br>
 
-<a href="event.php">Add Events</a>
+<a href="event.php" class="btn btn-primary">Add Events</a>
 
 <br><br>
 
-<a href="logout.php">Logout</a>
+<a href="logout.php" class="btn btn-outline-secondary" >Logout</a>
+
+</div>
+
+    </div>
+
+</div>
+
 
 </body>
 
