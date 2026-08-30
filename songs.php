@@ -88,48 +88,89 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <title>Add Song</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body  class="bg-light">
 
-    <h1>Add New Song</h1>
+<div class="container mt-5">
+
+    <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+
+    <h1 class="text-center mb-4">Add New Song</h1>
 
     <form method="POST" enctype="multipart/form-data">
 
-        <label>Song Name:</label>
-        <input type="text" name="song_name">
+        
+        <form method="POST" enctype="multipart/form-data">
 
-        <br><br>
+            <div class="mb-3">
+                <label class="form-label">Song Name:</label>
+                <input type="text"
+                       name="song_name"
+                       class="form-control"
+                       required>
+            </div>
 
-        <label>PDF Score:</label>
-        <input type="file" name="pdf_file" accept=".pdf" required>
+            <div class="mb-3">
+                <label class="form-label">PDF Score:</label>
+                <input type="file"
+                       name="pdf_file"
+                       class="form-control"
+                       accept=".pdf"
+                       required>
+            </div>
 
-        <br><br>
+            <div class="mb-3">
+                <label class="form-label">Alto Audio:</label>
+                <input type="file"
+                       name="alto_file"
+                       class="form-control"
+                       required>
+            </div>
 
-        <label>Alto Audio:</label>
-        <input type="file" name="alto_file" required>
+            <div class="mb-3">
+                <label class="form-label">Bass Audio:</label>
+                <input type="file"
+                       name="bass_file"
+                       class="form-control"
+                       required>
+            </div>
 
-        <br><br>
+            <div class="mb-3">
+                <label class="form-label">Soprano Audio:</label>
+                <input type="file"
+                       name="soprano_file"
+                       class="form-control"
+                       required>
+            </div>
 
-        <label>Bass Audio:</label>
-        <input type="file" name="bass_file" required>
+            <div class="mb-4">
+                <label class="form-label">Tenor Audio:</label>
+                <input type="file"
+                       name="tenor_file"
+                       class="form-control"
+                       required>
+            </div>
 
-        <br><br>
+            <div class="d-grid gap-2">
 
-        <label>Soprano Audio:</label>
-        <input type="file" name="soprano_file" required>
+                <button type="submit" class="btn btn-primary">
+                    Add Song
+                </button>
 
-        <br><br>
+                <a href="admin.php" class="btn btn-outline-secondary">
+                    Back to Admin Page
+                </a>
 
-        <label>Tenor Audio:</label>
-        <input type="file" name="tenor_file" required>
+            </div>
 
-        <br><br>
+        </form>
 
-        <input type="submit" value="Add Song" required>
+    </div>
 
-    </form>
+</div>
 
 </body>
-
 </html>

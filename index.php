@@ -32,9 +32,14 @@ $result = $conn->query($sql);
      
     </p><h3><?php echo $row["event_name"]; ?></h3>
     
-    <p class="mb-1"></P><h3><?php echo $row["event_date"]; ?></h3>
+    <p class="mb-1">
+        <p>Date:</p><?php echo $row["event_date"]; ?>
+    </p>
 
-    <p class="mb-0"></p><h3><?php echo $row["location"]; ?></h3>
+    <p class="mb-0">
+        <p>Location:</p>
+        <?php echo $row["location"]; ?></
+    </p>
 
     </div>
     <?php 
