@@ -26,25 +26,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <HTML>
-	<HEAD>
-    	<TITLE> New Event </TITLE>
-	</HEAD>
-		<BODY>
-			<FORM method="POST" action="event.php">
+	<head>
 
-			<label>Event Name:</label> 
-			<input type="text" name="event_name"><br>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+		<body class="bg-light">
 
-			<label>Event Date:</label>
-			<input type="date" name="event_date"><br>
+		<div class="container mt-5">
+			<h1 class="text-center mb-4">Add New Event</h1>
 
-			<label>Event Location:</label>
-			<input type="text" name="event_location"><br>
+			<form method="POST" action="event.php">
 
-			<input type="submit" value="Add Event"><br>
-		</FORM>
+			<div class="mb-3">
+				<label class="form-label">Event Name:</label> 
+				<input type="text" name="event_name" class="form-control">
+			</div>
+
+			<div class="mb-3">
+				<label>Event Date:</label>
+				<input type="date" name="event_date" class="form-control">
+			</div>
+
+			<div class="mb-3">
+				<label>Event Location:</label>
+				<input type="text" name="event_location"  class="form-control">
+			</div>
+			<div class="d-grid gap-2">
+				<input type="submit" value="Add Event" class="btn btn-primary">
+			</div>
+			
+				<a href="admin.php"
+                   class="btn btn-outline-secondary">
+                    Back to Admin Page
+                </a>
+
+            </div>
+		</form>
 	
-	</BODY>
+	</body>
 
 
 <!-- lab 4 - newMember.php -->

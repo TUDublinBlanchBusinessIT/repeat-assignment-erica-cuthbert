@@ -56,29 +56,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <title>Choir Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-    <h1>Choir Login</h1>
+<div class="container mt-5">
+
+    <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
+
+
+    <h1 class="text-center mb-4">Choir Login</h1>
 
     <?php echo $message; ?>
 
     <form method="POST" action="login.php">
 
+    <div class="mb-3">
         <label>Email:</label>
-        <input type="email" name="email" required>
-
-        <br><br>
-
+        <input type="email" name="email" class="form-control" required>
+    </div>
+    
+    <div class="mb-3">
         <label>Password:</label>
-        <input type="password" name="password" required>
-
-        <br><br>
-
-        <input type="submit" value="Login">
+        <input type="password" name="password" class="form-control" required>
+    </div>
+      
+    <div class="d-grid">
+        <input type="submit" value="Login" class="btn btn-primary">
+    </div>
 
     </form>
+</div>
 
 </body>
 
