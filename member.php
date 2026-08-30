@@ -22,9 +22,15 @@ if (!isset($_SESSION["user_id"])) {
 
     <h1>Choir Login</h1>
 
-    <p> Welcomw <?php echo $_SESSION["name"]; ?> </p>
+    <p> Welcome <?php echo $_SESSION["name"]; ?> </p>
 
     <p> Role: <?php echo $_SESSION["role"]; ?> </p>
+
+    <a href="songs.php">View Songs</a>
+
+    <br><br>
+
+    <a href="logout.php">Logout</a>
 
 
 </body>
