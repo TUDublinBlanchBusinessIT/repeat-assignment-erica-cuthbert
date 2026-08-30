@@ -26,46 +26,52 @@ $song = $result->fetch_assoc();
 <html>
 
 <head>
-    <title>Song</title>
+    <title>Song Downloads</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-<h1><?php echo $song["song_name"]; ?></h1>
+<div class="container mt-5">
 
-<h3>Music Score</h3>
+    <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
 
-<a href="<?php echo $song["pdf_file"]; ?>" download>
+<h1 class="text-center mb-4"><?php echo $song["song_name"]; ?></h1>
+
+<h4>Music Score</h4>
+
+<a href="<?php echo $song["pdf_file"]; ?>" class="btn btn-primary mb-4" download>
     Download PDF
 </a>
 
 <h3>Alto</h3>
 
-<a href="<?php echo $song["alto_file"]; ?>" download>
+<a href="<?php echo $song["alto_file"]; ?>" class="btn btn-primary mb-4" download>
     Download Alto
 </a>
 
 <h3>Bass</h3>
 
-<a href="<?php echo $song["bass_file"]; ?>" download>
+<a href="<?php echo $song["bass_file"]; ?>" class="btn btn-primary mb-4" download>
     Download Bass
 </a>
 
 <h3>Soprano</h3>
 
-<a href="<?php echo $song["soprano_file"]; ?>" download>
+<a href="<?php echo $song["soprano_file"]; ?>" class="btn btn-primary mb-4" download>
     Download Soprano
 </a>
 
 <h3>Tenor</h3>
 
-<a href="<?php echo $song["tenor_file"]; ?>" download>
+<a href="<?php echo $song["tenor_file"]; ?>" class="btn btn-primary mb-4" download>
     Download Tenor
 </a>
 
 <br><br>
 
-<a href="songList.php">Back to Songs</a>
+<a href="songList.php" class="btn btn-outline-secondary">Back to Songs</a>
 
 </body>
 </html>

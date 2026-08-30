@@ -17,26 +17,36 @@ $result = $conn->query("SELECT * FROM songs");
 
 <head>
     <title>Songs</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-light">
 
-<h1>Choir Songs</h1>
+<div class="container mt-5">
+
+     <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+
+<h1 class="text-center mb-4">Choir Songs</h1>
 
 <?php while ($row = $result->fetch_assoc()) { ?>
 
-    <h3><?php echo $row["song_name"]; ?></h3>
+<div class="card mb-3">
+    <div class="card-body">
 
-    <a href="songsDownloads.php?id=<?php echo $row["song_id"]; ?>">
+    <h4><?php echo $row["song_name"]; ?></h4>
+
+    <a href="songsDownloads.php?id=<?php echo $row["song_id"]; ?>"class="btn btn-primary">
         View Song </a>
 
-</a>
+</div>
+</div>
 
 <?php } ?>
 
 <br><br>
 
-<a href="member.php">Back to Homepage</a>
+<a href="member.php" class="btn btn-outline-secondary">Back to Homepage</a>
 
 </body>
 </html>
