@@ -29,28 +29,28 @@ if ($_SESSION["role"] != "admin") {
 
     <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
 
-<h1 class="text-center mb-3">Admin Page</h1>
+    <h1 class="text-center mb-3">Admin Page</h1>
 
-<p class="text-center">Welcome <?php echo $_SESSION["name"]; ?></p>
+    <p class="text-center">Welcome <?php echo $_SESSION["name"]; ?></p>
 
 
-<div class="d-grid gap-3">
+    <div class="d-grid gap-3">
 
-<a href="songs.php" class="btn btn-primary">Add Songs</a>
+        <a href="songs.php" class="btn btn-primary">Add Songs</a>
 
-<br><br>
+        <br><br>
 
-<a href="user.php" class="btn btn-primary">Add Users</a>
+        <a href="user.php" class="btn btn-primary">Add Users</a>
 
-<br><br>
+        <br><br>
 
-<a href="event.php" class="btn btn-primary">Add Events</a>
+        <a href="event.php" class="btn btn-primary">Add Events</a>
 
-<br><br>
+        <br><br>
 
-<a href="logout.php" class="btn btn-outline-secondary" >Logout</a>
+        <a href="logout.php" class="btn btn-outline-secondary" >Logout</a>
 
-</div>
+        </div>
 
     </div>
 

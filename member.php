@@ -35,19 +35,19 @@ if ($_SESSION["role"] != "member") {
 
     <h1 class="text-center mb-3">Members Page</h1>
 
-     <p class="text-center"> Welcome <?php echo $_SESSION["name"]; ?></p>
+        <p class="text-center"> Welcome <?php echo $_SESSION["name"]; ?></p>
 
-    <div class="d-grid gap-3">
+        <div class="d-grid gap-3">
 
-    <a href="songList.php" class="btn btn-primary">View Songs</a>
+        <a href="songList.php" class="btn btn-primary">View Songs</a>
 
-    <br><br>
+        <br><br>
 
-    <a href="index.php" class="btn btn-primary">View Events</a>
+        <a href="index.php" class="btn btn-primary">View Events</a>
 
-    <br><br>
+        <br><br>
 
-    <a href="logout.php" class="btn btn-secondary">Logout</a>
+        <a href="logout.php" class="btn btn-secondary">Logout</a>
 
       </div>
 

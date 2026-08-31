@@ -37,37 +37,37 @@ $song = $result->fetch_assoc();
 
     <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
 
-<h1 class="text-center mb-4"><?php echo $song["song_name"]; ?></h1>
+        <h1 class="text-center mb-4"><?php echo $song["song_name"]; ?></h1>
 
-<h4>Music Score</h4>
+    <h4>Music Score</h4>
 
-<a href="<?php echo $song["pdf_file"]; ?>" class="btn btn-primary mb-4" download>
-    Download PDF
-</a>
+        <a href="<?php echo $song["pdf_file"]; ?>" class="btn btn-primary mb-4" download>
+            Download PDF
+        </a>
 
-<h3>Alto</h3>
+    <h3>Alto</h3>
 
-<a href="<?php echo $song["alto_file"]; ?>" class="btn btn-primary mb-4" download>
-    Download Alto
-</a>
+        <a href="<?php echo $song["alto_file"]; ?>" class="btn btn-primary mb-4" download>
+            Download Alto
+        </a>
 
-<h3>Bass</h3>
+    <h3>Bass</h3>
 
-<a href="<?php echo $song["bass_file"]; ?>" class="btn btn-primary mb-4" download>
-    Download Bass
-</a>
+        <a href="<?php echo $song["bass_file"]; ?>" class="btn btn-primary mb-4" download>
+            Download Bass
+        </a>
 
-<h3>Soprano</h3>
+    <h3>Soprano</h3>
 
-<a href="<?php echo $song["soprano_file"]; ?>" class="btn btn-primary mb-4" download>
-    Download Soprano
-</a>
+        <a href="<?php echo $song["soprano_file"]; ?>" class="btn btn-primary mb-4" download>
+            Download Soprano
+        </a>
 
-<h3>Tenor</h3>
+    <h3>Tenor</h3>
 
-<a href="<?php echo $song["tenor_file"]; ?>" class="btn btn-primary mb-4" download>
-    Download Tenor
-</a>
+        <a href="<?php echo $song["tenor_file"]; ?>" class="btn btn-primary mb-4" download>
+            Download Tenor
+        </a>
 
 <br><br>
 

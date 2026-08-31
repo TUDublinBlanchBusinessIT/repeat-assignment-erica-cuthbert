@@ -27,19 +27,20 @@ $result = $conn->query("SELECT * FROM songs");
 
      <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
 
-<h1 class="text-center mb-4">Choir Songs</h1>
+        <h1 class="text-center mb-4">Choir Songs</h1>
 
-<?php while ($row = $result->fetch_assoc()) { ?>
+        <?php while ($row = $result->fetch_assoc()) { ?>
 
-<div class="card mb-3">
-    <div class="card-body">
+    <div class="card mb-3">
+        <div class="card-body">
 
     <h4><?php echo $row["song_name"]; ?></h4>
 
-    <a href="songsDownloads.php?id=<?php echo $row["song_id"]; ?>"class="btn btn-primary">
-        View Song </a>
+        <a href="songsDownloads.php?id=<?php echo $row["song_id"]; ?>"class="btn btn-primary">
+            View Song </a>
 
-</div>
+    </div>
+
 </div>
 
 <?php } ?>
